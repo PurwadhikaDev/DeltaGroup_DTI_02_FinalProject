@@ -7,7 +7,7 @@ Hello everyone!
 Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we dive deep into customer data to identify churn patterns and develop a machine learning model that predicts at-risk customers. These insights help telecom companies optimize retention strategies, reduce churn, and enhance customer loyalty. Join us as we explore how data can keep customers connected! 📊📡
 
 ## Related Links
-- [Tableau Link]()
+- [Tableau Link](https://public.tableau.com/app/profile/fine.oktafiani/viz/TELCOPREDICTSTORY/Story1?publish=yes)
 - [Raw Dataset: Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 - [Cleaned Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Cleaned_Dataset%20TelcoCustomerChurn.csv)
 - [Predicted Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Predicted_Dataset_TelcoCustomerChurn.csv)

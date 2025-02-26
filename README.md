@@ -7,7 +7,7 @@ Hello everyone!
 Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we dive deep into customer data to identify churn patterns and develop a machine learning model that predicts at-risk customers. These insights help telecom companies optimize retention strategies, reduce churn, and enhance customer loyalty. Join us as we explore how data can keep customers connected! 📊📡
 
 ## Related Links
-- [Tableau Link](https://public.tableau.com/views/FINPRO-DB1/DB_1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- [Tableau Link]()
 - [Raw Dataset: Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 - [Cleaned Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Cleaned_Dataset%20TelcoCustomerChurn.csv)
 - [Predicted Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Predicted_Dataset_TelcoCustomerChurn.csv)
@@ -15,8 +15,7 @@ Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we d
 - [Workbook.ipynb]()
 
 ## Project Overview
-Telecommunication companies face challenges in retaining their subscribed customers. In this project, we build a Machine Learning model to predict customer churn based on demographic data, customer account information, and service usage.
-According to Harvard Business Review, acquiring a new customer can be 10-25 times more expensive than retaining an existing one. Therefore, this project aims to reduce churn rates through a data-driven strategy.
+Telecommunication companies face challenges in retaining their subscribed customers. In this project, we build a Machine Learning model to predict customer churn based on demographic data, customer account information, and service usage. According to Harvard Business Review, acquiring a new customer can be 10-25 times more expensive than retaining an existing one. Therefore, this project aims to reduce churn rates through a data-driven strategy ([Source](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))
 
 ## Business Understanding
 The business objectives of this project are:

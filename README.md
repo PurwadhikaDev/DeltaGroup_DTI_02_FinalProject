@@ -12,7 +12,7 @@ Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we d
 - [Cleaned Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Cleaned_Dataset%20TelcoCustomerChurn.csv)
 - [Predicted Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Predicted_Dataset_TelcoCustomerChurn.csv)
 - [Pipeline Best Model(.sav)](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/final_pipeline_DeltaGroup_DTI_02.sav)
-- [Workbook.ipynb](https://colab.research.google.com/drive/13QZ7iqZNsaOzPiS23hsluj1j6VYNUVqY#scrollTo=Zzsr2bMtUoQd)
+- [Workbook.ipynb](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/DeltaGroup_DTI_02_FinalProject_TelcoCustomerChurn.ipynb)
 
 ## Project Overview
 Telecommunication companies face challenges in retaining their subscribed customers. In this project, we build a Machine Learning model to predict customer churn based on demographic data, customer account information, and service usage. According to Harvard Business Review, acquiring a new customer can be 10-25 times more expensive than retaining an existing one. Therefore, this project aims to reduce churn rates through a data-driven strategy ([Source](https://hbr.org/2014/10/the-value-of-keeping-the-right-customers))

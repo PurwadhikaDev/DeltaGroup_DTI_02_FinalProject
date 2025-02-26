@@ -92,35 +92,34 @@ This model achieves an F2 score of 0.75 and a recall score of 90%, meaning it ca
 maintains a balance between recall and F2-score across training and test sets. Specifically, the recall for class 1 is 88.58% (train) vs. 90.10% (test), and the F2-score is 74.59% (train) vs. 75.02% (test). Since the differences are minimal (+1.52% recall and +0.43% F2-score on test data), there is no significant drop in performance. This consistency indicates good generalization, making the model reliable for real-world use.
 
 4. Model Limitation:
-- **Data imbalance in the Churn group.**
-Currently, data imbalance is addressed through data engineering. However, this approach still carries the risk of errors and is not as effective as having a naturally balanced dataset.
-
-- **Features limitation**
-The model predicts customer churn based on the following features: **gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges.** If new features are added to the dataset, the model will not be able to account for their impact on churn prediction, requiring retraining data.
-
-- **Features range limitation.**
-The churn prediction model is trained on the following value ranges for each feature:
-  - gender = Male, Female
-  - senior_citizen = No, Yes
-  - partner = No, Yes
-  - dependents = No, Yes
-  - tenure = 0 - 72 months
-  - phone_service = Yes, No
-  - multiple_lines = No, Yes, No phone service
-  - internet_service = Fiber optic, DSL, No
-  - online_security = No, Yes, No internet service
-  - online_backup = No, Yes, No internet service
-  - device_protection = No, Yes, No internet service
-  - tech_support = No, Yes, No internet service
-  - streaming_tv = No, Yes, No internet service
-  - streaming_movies = No, Yes, No internet service
-  - contract = Month-to-month, One year, Two year
-  - paperless_billing = Yes, No
-  - payment_method = Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)
-  - monthly_charges = 19.85 - 114.70
-  - total_charges = 19.65 - 6849.40
-
-If new data contains values outside these ranges, the model may still make predictions, but their accuracy and reliability are uncertain. To ensure accurate predictions, the model should be retrained with updated data that includes the new value ranges
+  - **Data imbalance in the Churn group.**
+  Currently, data imbalance is addressed through data engineering. However, this approach still carries the risk of errors and is not as effective as having a naturally balanced dataset.
+  
+  - **Features limitation**
+  The model predicts customer churn based on the following features: **gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges.** If new features are added to the dataset, the model will not be able to account for their impact on churn prediction, requiring retraining data.
+  
+  - **Features range limitation.**
+  The churn prediction model is trained on the following value ranges for each feature:
+    - gender = Male, Female
+    - senior_citizen = No, Yes
+    - partner = No, Yes
+    - dependents = No, Yes
+    - tenure = 0 - 72 months
+    - phone_service = Yes, No
+    - multiple_lines = No, Yes, No phone service
+    - internet_service = Fiber optic, DSL, No
+    - online_security = No, Yes, No internet service
+    - online_backup = No, Yes, No internet service
+    - device_protection = No, Yes, No internet service
+    - tech_support = No, Yes, No internet service
+    - streaming_tv = No, Yes, No internet service
+    - streaming_movies = No, Yes, No internet service
+    - contract = Month-to-month, One year, Two year
+    - paperless_billing = Yes, No
+    - payment_method = Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)
+    - monthly_charges = 19.85 - 114.70
+    - total_charges = 19.65 - 6849.40
+      If new data contains values outside these ranges, the model may still make predictions, but their accuracy and reliability are uncertain. To ensure accurate predictions, the model should be retrained with updated data that includes the new value ranges
 
 
 ## Recommendation

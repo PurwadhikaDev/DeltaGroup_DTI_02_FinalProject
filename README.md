@@ -4,7 +4,13 @@
 
 ## Related Links
 - [Tableau Link](https://public.tableau.com/views/FINPRO-DB1/DB_1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- [Raw Dataset: Telco Customer Churn] (https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+- [Cleaned Dataset: Telco Customer Churn] ()
+- [Predicted Dataset: Telco Customer Churn] ()
+- [Pipeline Best Model(.sav)] ()
+- [Workbook.ipynb] ()
 
+##
 
 ## Project Overview
 Telecommunication companies face challenges in retaining their subscribed customers. In this project, we build a Machine Learning model to predict customer churn based on demographic data, customer account information, and service usage.

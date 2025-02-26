@@ -3,6 +3,7 @@
 # Telco Customer Churn Prediction
 
 Hello everyone!
+
 Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we dive deep into customer data to identify churn patterns and develop a machine learning model that predicts at-risk customers. These insights help telecom companies optimize retention strategies, reduce churn, and enhance customer loyalty. Join us as we explore how data can keep customers connected! 📊📡
 
 ## Related Links
@@ -161,7 +162,8 @@ maintains a balance between recall and F2-score across training and test sets. S
     - payment_method = Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)
     - monthly_charges = 19.85 - 114.70
     - total_charges = 19.65 - 6849.40
-      If new data contains values outside these ranges, the model may still make predictions, but their accuracy and reliability are uncertain. To ensure accurate predictions, the model should be retrained with updated data that includes the new value ranges
+
+If new data contains values outside these ranges, the model may still make predictions, but their accuracy and reliability are uncertain. To ensure accurate predictions, the model should be retrained with updated data that includes the new value ranges
 
 
 ## Recommendation
@@ -184,3 +186,5 @@ Here are the prioritized strategies for business improvement to prevent customer
 
 
 ### Tableau Dashboard
+![image](https://github.com/user-attachments/assets/14d5100b-f6dd-4bc1-80e9-cf7a899ca007)
+

@@ -56,3 +56,87 @@ The modeling process involves:
 2. Handling Class Imbalance: Using Borderline SMOTE oversampling to balance the dataset.
 3. Benchmarking Models: Testing various algorithms like Logistic Regression, Random Forest, XGBoost, etc.
 4. Model Evaluation: Using appropriate metrics for churn prediction.
+
+## Conclusion
+### Conclusion for Business
+1. key customer profiles related to churn:
+- Gender: Churn rates show minimal differences across genders, ranging from 26-27%.
+- Generation: Older customers have a higher churn rate (41.7%) compared to younger customers.
+- Marital Status: Customers without a partner are more likely to churn compared to those with a partner.
+- Dependents: Customers without family dependents are more likely to churn (31.3%) than those with dependents.
+
+2.  Top factors contribute to churn
+- Contract: Shorter contracts are more likely to result in churn. Customer with 'Month-to-month' contract is more likely to churn (42.7%), compared to 'one year contract' (11.3%) and 'two year contract' (2.8%)
+- Monthly Charges: low monthly charges are more likely lead to churn. customer who spend monthly charges less than $67.2 are at high churn risk.
+- Tenure: Newer customers are at higher risk of churning. Customers with 1-5 month tenure contribute to 40% (744 out of 1866) of total tenure.
+- Internet Service: Fiber optic users tend to churn more, contributing around 41.9% of customer churn compared to another internet service.
+- paperless Billing: customers with paperless billing tend to churn (33.6 % churn rate)
+
+### Conclusion for Model
+1. Best Machine Learning model:
+Based on our analysis, the best model for predicting churn is **Logistic Regression with Borderline SMOTE oversampling**, using the following parameters:
+- C: 10
+- Penalty: I1
+- Solver: saga
+- Class weight: balanced
+- Threshold: 0.43
+
+This model achieves an F2 score of 0.75 and a recall score of 90%, meaning it can effectively predict 90% customers who are likely to churn.
+
+2. Marketing Cost Optimization using the model
+- **Without Model:** Out of 7,043 customers, 26.5% (1,866) are projected to churn, requiring acquisition efforts, while the remaining 5,177 customers fall under retention strategies. The total cost incurred without intervention is $424,970, consisting of $373,200 for acquisition and $51,770 for retention.
+- **With Model:** With a recall of 90%, the model correctly identifies 1,679 out of 1,866 churners that require targeted retention efforts, while 187 churners are missed and require acquisition. The total cost incurred with the model is $173,120, consisting of $51,770 for retaining non-churners, $83,950 for preventing churn among identified customers, and $37,400 for acquiring new customers to replace those missed by the model.
+- **Summary:** By implementing the model, the total cost was significantly reduced from $424,970 to $173,120. This resulted in savings of $251,850, demonstrating the model's effectiveness in optimizing costs.
+
+3. Model Trustworthy:
+maintains a balance between recall and F2-score across training and test sets. Specifically, the recall for class 1 is 88.58% (train) vs. 90.10% (test), and the F2-score is 74.59% (train) vs. 75.02% (test). Since the differences are minimal (+1.52% recall and +0.43% F2-score on test data), there is no significant drop in performance. This consistency indicates good generalization, making the model reliable for real-world use.
+
+4. Model Limitation:
+- **Data imbalance in the Churn group.**
+Currently, data imbalance is addressed through data engineering. However, this approach still carries the risk of errors and is not as effective as having a naturally balanced dataset.
+
+- **Features limitation**
+The model predicts customer churn based on the following features: **gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges.** If new features are added to the dataset, the model will not be able to account for their impact on churn prediction, requiring retraining data.
+
+- **Features range limitation.**
+The churn prediction model is trained on the following value ranges for each feature:
+  - gender = Male, Female
+  - senior_citizen = No, Yes
+  - partner = No, Yes
+  - dependents = No, Yes
+  - tenure = 0 - 72 months
+  - phone_service = Yes, No
+  - multiple_lines = No, Yes, No phone service
+  - internet_service = Fiber optic, DSL, No
+  - online_security = No, Yes, No internet service
+  - online_backup = No, Yes, No internet service
+  - device_protection = No, Yes, No internet service
+  - tech_support = No, Yes, No internet service
+  - streaming_tv = No, Yes, No internet service
+  - streaming_movies = No, Yes, No internet service
+  - contract = Month-to-month, One year, Two year
+  - paperless_billing = Yes, No
+  - payment_method = Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)
+  - monthly_charges = 19.85 - 114.70
+  - total_charges = 19.65 - 6849.40
+
+If new data contains values outside these ranges, the model may still make predictions, but their accuracy and reliability are uncertain. To ensure accurate predictions, the model should be retrained with updated data that includes the new value ranges
+
+
+## Recommendation
+
+### Recommendation for Business
+Here are the prioritized strategies for business improvement to prevent customer churn:
+- **Increase Contract Retention**: Offer a 10-15% discount or free service upgrades for customers who switch from month-to-month to one- or two-year contracts.
+- **Bonus for High Spender**: Customers who spend more than the monthly charges average can get additional service bonuses.
+- **Improve New Customer Retention**: Implement a personalized onboarding program (emails, tutorials, or dedicated support calls) targeting customers within their first 5 months.
+- **Enhance Fiber Optic Service Experience**: Offer a 20% discount on the first 5 months of online security, backup, or tech support for customers with fiber optic service. Conduct customer satisfaction surveys specifically for fiber optic users, identifying key issues related to performance, pricing, or support for improvements.
+- **Optimize Paperless Billing Experience**: Introduce payment reminder emails or provide dedicated customer service to call for reminders.
+
+### Recommendation for Model
+
+- **Balance the dataset**: We can try to use other resampling techniques and collect more real-world data to balance the dataset. This is useful for improving model reliability and reducing bias.
+- **Expand feature set**: If we add new features, we can regularly analyze and add new features, ensuring the model captures all relevant factors influencing churn.
+- **Update model for new data**: Try to re-train the model periodically when we have new features or value ranges to maintain prediction accuracy.
+- **Adjust parameter range**: Currently, we are using the maximum 10 for C parameters. We can try to broaden the range to get better results.
+- **Add more relevant features**: For example, currently, we don't have an 'age' feature, so it's quite difficult to distinguish between senior citizens and non-senior citizens for future data. Adding such features can improve model performance.

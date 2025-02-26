@@ -2,6 +2,9 @@
 
 # Telco Customer Churn Prediction
 
+Hello everyone!
+Welcome to the Telco Customer Churn Analysis project! 🚀 In this project, we dive deep into customer data to identify churn patterns and develop a machine learning model that predicts at-risk customers. These insights help telecom companies optimize retention strategies, reduce churn, and enhance customer loyalty. Join us as we explore how data can keep customers connected! 📊📡
+
 ## Related Links
 - [Tableau Link](https://public.tableau.com/views/FINPRO-DB1/DB_1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - [Raw Dataset: Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
@@ -10,11 +13,33 @@
 - [Pipeline Best Model(.sav)](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/final_pipeline_DeltaGroup_DTI_02.sav)
 - [Workbook.ipynb]()
 
-##
-
 ## Project Overview
 Telecommunication companies face challenges in retaining their subscribed customers. In this project, we build a Machine Learning model to predict customer churn based on demographic data, customer account information, and service usage.
 According to Harvard Business Review, acquiring a new customer can be 10-25 times more expensive than retaining an existing one. Therefore, this project aims to reduce churn rates through a data-driven strategy.
+
+## Business Understanding
+The business objectives of this project are:
+- Identify customer churn patterns based on given data.
+- Analyze the factors that contribute to churn .
+- Determine the best Machine Learning model for churn prediction.
+- Reduce False Negatives in churn prediction to retain more customers.
+- Help the marketing team create more effective customer retention strategies.
+
+### Stakeholder:
+With the available churn data, the marketing team aims to accurately identify churn patterns to optimize retention costs and develop targeted strategies for different customer segments to enhance customer retention.. additionally, this data will be further used by sales, customer service, and product team for product development and improving customer experience.
+
+## Analytical Approach
+Our approach focuses on analyzing customer data to identify patterns that differentiate churned customers from retained ones. By developing a classification model, we aim to predict churn probability, allowing the company to optimize retention efforts and reduce marketing costs by targeting the right customers efficiently.
+
+## Evaluation Metrics
+Since the primary focus is churn reduction, we use F2-score as the main metric, which emphasizes Recall over Precision.
+Other metrics used:
+ - Accuracy: Measures overall model correctness.
+ - Precision: Important if retention intervention costs are high.
+ - Recall: Ensures that as many churn customers as possible are detected.
+ - F1-score: A balance between Precision & Recall, although in this study, F2-score is prioritized.
+ - ROC-AUC score: distinguishing between customers who will churn and those who will stay
+ - Average Precision (AP) score: easures the area under the Precision-Recall curve, summarizing model ranking performance. Higher AP (closer to 1) indicates better classification, especially for imbalanced data.
 
 ## Dataset
 The dataset used in this project is Telco Customer Churn, which contains information on:
@@ -49,23 +74,30 @@ Target :
 *   0: Customer won't churn
 *   1: Churn will churn
 
-## Business Understanding
-The business objectives of this project are:
-- Identify customer churn patterns based on given data.
-- Analyze the factors that contribute to churn .
-- Determine the best Machine Learning model for churn prediction.
-- Reduce False Negatives in churn prediction to retain more customers.
-- Help the marketing team create more effective customer retention strategies.
+### Data Cleaning
+- Check Data Types – Ensure each column has the correct data type for analysis.
+- Descriptive Statistics – Summarize key metrics to understand raw data distribution.
+- Check Unique Values – Identify categorical inconsistencies or anomalies.
+- Check Duplicates – Eliminate redundant entries to maintain data integrity.
+- Handle Missing Values – Impute or remove missing data for consistency.
+- Detect Outliers – Identify and address extreme values affecting model performance.
+- Analyze Numerical Distributions – Understand feature distribution for proper scaling.
+- Check Multicollinearity – Detect highly correlated features to avoid redundancy.
 
-### Stakeholder:
-With the available churn data, the marketing team aims to accurately identify churn patterns to optimize retention costs and develop targeted strategies for different customer segments to enhance customer retention.. additionally, this data will be further used by sales, customer service, and product team for product development and improving customer experience.
+## Exploratory Data Analysis (EDA)
+- Churn ditribution
+- Customer Account info with numerical variable
+- Customer Account info with categorial variable
+- Correlation analysis
 
 ## Machine Learning Approach
 The modeling process involves:
-1. Data Exploration & Preprocessing: Data cleaning, handling missing values, encoding categorical variables.
+1. Data Preprocessing: Data cleaning, handling missing values, encoding categorical variables.
 2. Handling Class Imbalance: Using Borderline SMOTE oversampling to balance the dataset.
-3. Benchmarking Models: Testing various algorithms like Logistic Regression, Random Forest, XGBoost, etc.
-4. Model Evaluation: Using appropriate metrics for churn prediction.
+3. Benchmarking Models: Testing various algorithms like Logistic Regression, Random Forest, XGBoost, decision tree, LGBM, K-Nearest Neighbors.
+4. Hyperparameter Tuning: use Grid search for finding the best parameters to tune the model.
+5. Threshold Analysis: finding the best threshold to get the best F2 score.
+6. Model Evaluation: Using appropriate metrics for churn prediction.
 
 ## Conclusion
 ### Conclusion for Business
@@ -149,3 +181,6 @@ Here are the prioritized strategies for business improvement to prevent customer
   - **Update model for new data**: Try to re-train the model periodically when we have new features or value ranges to maintain prediction accuracy.
   - **Adjust parameter range**: Currently, we are using the maximum 10 for C parameters. We can try to broaden the range to get better results.
   - **Add more relevant features**: For example, currently, we don't have an 'age' feature, so it's quite difficult to distinguish between senior citizens and non-senior citizens for future data. Adding such features can improve model performance.
+
+
+### Tableau Dashboard

@@ -135,8 +135,8 @@ Here are the prioritized strategies for business improvement to prevent customer
 
 ### Recommendation for Model
 
-- **Balance the dataset**: We can try to use other resampling techniques and collect more real-world data to balance the dataset. This is useful for improving model reliability and reducing bias.
-- **Expand feature set**: If we add new features, we can regularly analyze and add new features, ensuring the model captures all relevant factors influencing churn.
-- **Update model for new data**: Try to re-train the model periodically when we have new features or value ranges to maintain prediction accuracy.
-- **Adjust parameter range**: Currently, we are using the maximum 10 for C parameters. We can try to broaden the range to get better results.
-- **Add more relevant features**: For example, currently, we don't have an 'age' feature, so it's quite difficult to distinguish between senior citizens and non-senior citizens for future data. Adding such features can improve model performance.
+  - **Balance the dataset**: We can try to use other resampling techniques and collect more real-world data to balance the dataset. This is useful for improving model reliability and reducing bias.
+  - **Expand feature set**: If we add new features, we can regularly analyze and add new features, ensuring the model captures all relevant factors influencing churn.
+  - **Update model for new data**: Try to re-train the model periodically when we have new features or value ranges to maintain prediction accuracy.
+  - **Adjust parameter range**: Currently, we are using the maximum 10 for C parameters. We can try to broaden the range to get better results.
+  - **Add more relevant features**: For example, currently, we don't have an 'age' feature, so it's quite difficult to distinguish between senior citizens and non-senior citizens for future data. Adding such features can improve model performance.

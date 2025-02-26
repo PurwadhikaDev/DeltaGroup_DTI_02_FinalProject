@@ -5,10 +5,10 @@
 ## Related Links
 - [Tableau Link](https://public.tableau.com/views/FINPRO-DB1/DB_1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - [Raw Dataset: Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
-- [Cleaned Dataset: Telco Customer Churn] ()
-- [Predicted Dataset: Telco Customer Churn] ()
-- [Pipeline Best Model(.sav)] ()
-- [Workbook.ipynb] ()
+- [Cleaned Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Cleaned_Dataset%20TelcoCustomerChurn.csv)
+- [Predicted Dataset: Telco Customer Churn](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/Predicted_Dataset_TelcoCustomerChurn.csv)
+- [Pipeline Best Model(.sav)](https://github.com/PurwadhikaDev/DeltaGroup_DTI_02_FinalProject/blob/main/final_pipeline_DeltaGroup_DTI_02.sav)
+- [Workbook.ipynb]()
 
 ##
 
